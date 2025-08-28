@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <url>
-      <loc>https://joesephbolg.github.io/Joseph-uzoukwu-portfolio/</loc>
-      <priority>1.00</priority>
-   </url>
-   <url>
-      <loc>https://joesephbolg.github.io/Joseph-uzoukwu-portfolio/projects</loc>
-      <priority>0.80</priority>
-   </url>
-   <url>
-      <loc>https://joesephbolg.github.io/Joseph-uzoukwu-portfolio/contact</loc>
-      <priority>0.80</priority>
-   </url>
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://joesephbolg.github.io/Joseph-uzoukwu-portfolio/</loc>
+    <lastmod>2025-08-28</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Projects Page -->
+  <url>
+    <loc>https://joesephbolg.github.io/Joseph-uzoukwu-portfolio/projects</loc>
+    <lastmod>2025-08-28</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://joesephbolg.github.io/Joseph-uzoukwu-portfolio/contact</loc>
+    <lastmod>2025-08-28</lastmod>
+    <priority>0.80</priority>
+  </url>
+
 </urlset>
