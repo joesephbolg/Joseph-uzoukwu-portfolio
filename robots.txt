@@ -1,0 +1,4 @@
+User-agent: * 
+Allow: /
+
+Sitemap: https://joesephbolg.github.io/Joseph-uzoukwu-portfolio/sitemap.xml
