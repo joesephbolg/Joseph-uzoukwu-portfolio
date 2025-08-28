@@ -4,4 +4,12 @@
       <loc>https://joesephbolg.github.io/Joseph-uzoukwu-portfolio/</loc>
       <priority>1.00</priority>
    </url>
+   <url>
+      <loc>https://joesephbolg.github.io/Joseph-uzoukwu-portfolio/projects</loc>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://joesephbolg.github.io/Joseph-uzoukwu-portfolio/contact</loc>
+      <priority>0.80</priority>
+   </url>
 </urlset>
