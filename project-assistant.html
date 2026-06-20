@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" type="image/png" href="zd.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZionDesigns AI Assistant</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#050505;
+color:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.chat-container{
+width:95%;
+max-width:800px;
+height:90vh;
+background:#111;
+border-radius:20px;
+overflow:hidden;
+display:flex;
+flex-direction:column;
+border:1px solid rgba(255,215,0,.2);
+}
+
+.header{
+background:#000;
+padding:20px;
+border-bottom:1px solid rgba(255,215,0,.2);
+}
+
+.header h2{
+color:#FFD700;
+}
+
+.chat-body{
+flex:1;
+overflow-y:auto;
+padding:20px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.bot{
+background:#1a1a1a;
+padding:15px;
+border-radius:15px;
+max-width:80%;
+align-self:flex-start;
+}
+
+.user{
+background:#FFD700;
+color:#000;
+padding:15px;
+border-radius:15px;
+max-width:80%;
+align-self:flex-end;
+}
+
+.chat-input{
+display:flex;
+padding:15px;
+background:#0a0a0a;
+}
+
+.chat-input input{
+flex:1;
+padding:15px;
+border:none;
+outline:none;
+background:#1a1a1a;
+color:white;
+border-radius:10px;
+}
+
+.chat-input button{
+margin-left:10px;
+padding:15px 25px;
+border:none;
+background:#FFD700;
+color:black;
+font-weight:bold;
+border-radius:10px;
+cursor:pointer;
+}
+
+.whatsapp-btn{
+display:inline-block;
+margin-top:15px;
+padding:12px 20px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<div class="chat-container">
+
+<div class="header">
+<h2>ZionDesigns AI Assistant</h2>
+<p>Project Consultation</p>
+</div>
+
+<div class="chat-body" id="chat">
+
+<div class="bot">
+👋 Welcome to ZionDesigns.
+
+What service are you interested in today?
+
+(Website, Logo Design, Branding, Graphics Design, Online Course)
+</div>
+
+</div>
+
+<div class="chat-input">
+<input type="text" id="input" placeholder="Type here...">
+<button onclick="sendMessage()">Send</button>
+</div>
+
+</div>
+
+<script>
+
+let step = 0;
+let answers = [];
+
+function addMessage(text,type){
+
+const msg = document.createElement("div");
+msg.className = type;
+msg.innerHTML = text;
+
+document.getElementById("chat").appendChild(msg);
+
+document.getElementById("chat").scrollTop =
+document.getElementById("chat").scrollHeight;
+}
+
+function sendMessage(){
+
+const input = document.getElementById("input");
+
+if(input.value.trim() === "") return;
+
+const text = input.value;
+
+addMessage(text,"user");
+
+answers.push(text);
+
+input.value="";
+
+step++;
+
+setTimeout(()=>{
+
+if(step===1){
+
+addMessage(
+"Great choice. Is this for a Business, Church, School, Hotel, or Personal Brand?",
+"bot"
+);
+
+}
+
+else if(step===2){
+
+addMessage(
+"Nice. Do you already have a logo and branding?",
+"bot"
+);
+
+}
+
+else if(step===3){
+
+addMessage(
+"Would you like a Basic package or a Premium package?",
+"bot"
+);
+
+}
+
+else if(step===4){
+
+const service = answers[0];
+
+addMessage(
+
+`
+Excellent.
+
+I have enough information to connect you directly with Joseph.
+
+<a class="whatsapp-btn"
+href="https://wa.me/2349036485759?text=Hello Joseph,%20I%20am%20interested%20in%20${encodeURIComponent(service)}.%20I%20just%20completed%20the%20consultation%20on%20your%20website."
+target="_blank">
+
+🚀 Continue on WhatsApp
+
+</a>
+`
+
+,"bot");
+
+}
+
+},700);
+
+}
+
+</script>
+
+</body>
+</html>
